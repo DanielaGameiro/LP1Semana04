@@ -5,7 +5,7 @@ namespace Power2Method
     class Program
     {
         /// <summary>
-        /// Program starts here. Calls the methods to print powers of 2.
+        /// Program starts here.
         /// </summary>
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace Power2Method
         }
 
         /// <summary>
-        /// Calls the method PowersOf2UntilN() to print powers of 2 until arg = 2.
+        /// Prints numbers from 1 to 5.
         /// </summary>
         private static void PowersOf2Until5()
         {
@@ -27,7 +27,7 @@ namespace Power2Method
         }
 
         /// <summary>
-        /// Prints numbers from 1 to n.
+        /// Prints numbers from 1 to <see cref="n"/>.
         /// </summary>
         /// <param name="n">The maximum value to print to.</param>
         private static void PowersOf2UntilN(int n)
