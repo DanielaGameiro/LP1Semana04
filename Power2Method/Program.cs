@@ -13,13 +13,13 @@ namespace Power2Method
             Console.WriteLine();
             PowersOf2Until5();
             Console.WriteLine();
-            PowersOf2UntilN(4, 8);
+            PowersOf2UntilN(1, 2);
             Console.WriteLine();
             PowersOf2UntilN(2, 4);
         }
 
         /// <summary>
-        /// Prints numbers from 1 to 5.
+        /// Prints powers of 2 numbers from 1 to 5.
         /// </summary>
         private static void PowersOf2Until5()
         {
@@ -27,25 +27,25 @@ namespace Power2Method
         }
 
         /// <summary>
-        /// Prints numbers from 1 to <see cref="n"/>.
+        /// Prints powers of 2 numbers from 1 to <see cref="n"/>.
         /// </summary>
-        /// <param name="n">The maximum value to print to.</param>
+        /// <param name="n">The start value to print to.</param>
         private static void PowersOf2UntilN(int n)
         {
             PowersOf2UntilN(1, n);
         }
 
         /// <summary>
-        /// Prints numbers from <see cref="n1"/> to <see cref="n2"/>.
+        /// Prints powers of 2 numbers from <see cref="n1"/> to <see cref="n2"/>.
         /// </summary>
-        /// <param name="n1">The minimum value to print to.</param>
-        /// <param name="n2">The maximum value to print to.</param>
+        /// <param name="n1">The start value to print to.</param>
+        /// <param name="n2">The end value to print to.</param>
         private static void PowersOf2UntilN(int n1, int n2)
         {
-            for (int i = n1; i <= n2; i++)
+            for (int i = 1 << n1; i <= (1 << n2); i <<= 1)
             {
                 Console.WriteLine(i);
             }
-        } 
+        }
     }
 }
