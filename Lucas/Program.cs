@@ -6,15 +6,11 @@ namespace Lucas
     {
         static void Main(string[] args)
         {
-            string s;
-            int n;
-            int l;
-
-            Console.Write("What Lucas number do you want? ");
-
-            s = Console.ReadLine();
-            n = int.Parse(s);
-            l = Lucas(n);
+            if (args.Length == 0)
+                return;
+            
+            int n = int.Parse(args[0]);
+            int l = Lucas(n);
 
             Console.WriteLine($"The {n}th Lucas number is {l}.");
         }
