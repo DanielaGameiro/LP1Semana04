@@ -13,9 +13,9 @@ namespace Power2Method
             Console.WriteLine();
             PowersOf2Until5();
             Console.WriteLine();
-            PowersOf2UntilN(1);
+            PowersOf2UntilN(4, 8);
             Console.WriteLine();
-            PowersOf2UntilN(4);
+            PowersOf2UntilN(2, 4);
         }
 
         /// <summary>
@@ -32,10 +32,20 @@ namespace Power2Method
         /// <param name="n">The maximum value to print to.</param>
         private static void PowersOf2UntilN(int n)
         {
-            for (int i = 1; i <= (1 << n); i <<= 1)
+            PowersOf2UntilN(1, n);
+        }
+
+        /// <summary>
+        /// Prints numbers from <see cref="n1"/> to <see cref="n2"/>.
+        /// </summary>
+        /// <param name="n1">The minimum value to print to.</param>
+        /// <param name="n2">The maximum value to print to.</param>
+        private static void PowersOf2UntilN(int n1, int n2)
+        {
+            for (int i = n1; i <= n2; i++)
             {
                 Console.WriteLine(i);
             }
-        }
+        } 
     }
 }
